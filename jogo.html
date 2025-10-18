@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de Cartas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container-jogo">
+        <aside class="sidebar">
+            <section class="placar-section">
+                <h2>Placar</h2>
+                <table id="placar-tabela">
+                    <thead>
+                        <tr>
+                            <th>Jogador</th>
+                            <th>Pontuação</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        </tbody>
+                </table>
+            </section>
+
+            <section class="historico-section">
+                <h2>Histórico de Jogadas</h2>
+                <ul id="historico-lista">
+                    </ul>
+            </section>
+        </aside>
+
+        <section class="area-central">
+            <div id="mesa" class="mesa">
+                </div>
+        </section>
+
+        <section class="jogadores-section">
+            <div id="jogador-1" class="area-jogador">
+                <h3 id="nome-jogador-1"></h3>
+                <div class="mao" id="mao-jogador-1">
+                    </div>
+            </div>
+            <div id="jogador-2" class="area-jogador">
+                <h3 id="nome-jogador-2"></h3>
+                <div class="mao" id="mao-jogador-2">
+                    </div>
+            </div>
+        </section>
+
+        <footer class="controles">
+            <button id="btn-fim-turno">Fim de Turno</button>
+            <button id="btn-reset">Resetar Jogo</button>
+        </footer>
+    </main>
+    <script src=".js"></script> <!-- colocar aqui o nome do arq js -->
+</body>
+</html>
