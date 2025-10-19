@@ -1,5 +1,5 @@
 /* GERAL */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
 * {
     margin: 0;
@@ -180,3 +180,160 @@ button:hover {
         height: auto;
     }
 }
+
+/* Novas regras para Truco */
+
+/* Animação para cartas jogadas */
+.card-played-animation {
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+    animation: cardToTable 0.5s forwards;
+}
+
+@keyframes cardToTable {
+    from {
+        transform: translateY(0) translateX(0) scale(1);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(-50px) translateX(0) scale(0.8);
+        opacity: 1;
+    }
+}
+
+/* Ajuste para a mão dos jogadores para 3 cartas */
+.mao {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    min-height: 120px; /* Garante espaço mesmo sem cartas */
+}
+
+.mao .card {
+    width: 80px;
+    height: 112px;
+    background-size: cover;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.mao .card:hover {
+    transform: translateY(-10px) scale(1.05);
+}
+
+.mesa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    min-height: 150px; /* Espaço para as cartas na mesa */
+    border: 2px dashed #ccc;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.mesa .card-on-table {
+    width: 100px;
+    height: 140px;
+    background-size: cover;
+    border-radius: 5px;
+    box-shadow: 3px 3px 8px rgba(0,0,0,0.5);
+}
+
+.jogador-da-vez-area {
+    border: 2px solid gold; /* Destaque para o jogador da vez */
+    box-shadow: 0 0 15px gold;
+}
+
+
+
+/* Estilo para esconder as cartas */
+.card.hidden {
+
+    background-color: #a0a0a0; /* Cor de fundo para cartas escondidas */
+    /* Outros estilos para garantir que a carta pareça virada */
+    background-size: cover;
+    background-position: center;
+}
+
+/* Desabilitar eventos de clique para cartas escondidas */
+.card.hidden {
+    pointer-events: none;
+    cursor: default;
+}
+
+.card.hidden.cover_blue {
+    background-image: url("cards/cover_blue.png") !important;
+}
+
+.card.hidden.cover_red {
+    background-image: url("cards/cover_red.png") !important;
+}
+
+
+
+/* Estilos para o Modal de Regras */
+.modal {
+    display: none; /* Escondido por padrão */
+    position: fixed; /* Fica por cima de tudo */
+    z-index: 1; /* Acima de outros elementos */
+    left: 0;
+    top: 0;
+    width: 100%; /* Largura total */
+    height: 100%; /* Altura total */
+    overflow: auto; /* Habilita scroll se necessário */
+    background-color: rgba(0,0,0,0.4); /* Fundo semi-transparente preto */
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% do topo e centralizado */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Largura do conteúdo do modal */
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    position: relative;
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#regras-conteudo {
+    max-height: 400px; /* Altura máxima antes de ativar o scroll */
+    overflow-y: auto; /* Adiciona scrollbar vertical quando o conteúdo exceder a altura */
+    padding-right: 15px; /* Espaço para a scrollbar */
+}
+
+#regras-conteudo h3 {
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+#regras-conteudo p {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+}
+
+

@@ -6,7 +6,7 @@
     <title>Jogo de Cartas</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="jogo-page">
     <main class="container-jogo">
         <aside class="sidebar">
             <section class="placar-section">
@@ -49,10 +49,28 @@
         </section>
 
         <footer class="controles">
+            <button id="btn-como-jogar">Como Jogar</button>
+            <button id="btn-comecar-jogada">Começar Jogada</button>
+            <button id="btn-truco">Truco</button>
+            <div id="truco-options" style="display: none;">
+                <button id="btn-aceitar-truco">Aceitar</button>
+                <button id="btn-negar-truco">Negar</button>
+                <button id="btn-aumentar-truco">Aumentar</button>
+            </div>
             <button id="btn-fim-turno">Fim de Turno</button>
             <button id="btn-reset">Resetar Jogo</button>
         </footer>
     </main>
-    <script src=".js"></script> <!-- colocar aqui o nome do arq js -->
+    <script src="functions.js"></script> 
+    <!-- Modal de Regras -->
+    <div id="modal-regras" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Regras do Truco Mineiro</h2>
+            <div id="regras-conteudo">
+                <!-- Conteúdo das regras será inserido aqui pelo JavaScript -->
+            </div>
+        </div>
+    </div>
 </body>
 </html>
