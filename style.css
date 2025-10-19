@@ -355,8 +355,8 @@ button:hover {
 }  
 
 .played-cards-history .card-on-table {
-    width: 50px; /* Tamanho menor */
-    height: 70px; /* Tamanho menor */
+    width: 75px; /* Tamanho menor */
+    height: 150px; /* Tamanho menor */
     box-shadow: 1px 1px 3px rgba(0,0,0,0.3);
 }
 
