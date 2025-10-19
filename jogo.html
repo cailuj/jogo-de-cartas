@@ -27,12 +27,13 @@
                 <h2>Histórico de Jogadas</h2>
                 <ul id="historico-lista">
                     </ul>
+                <div id="played-cards-history" class="played-cards-history"></div>
             </section>
         </aside>
-
         <section class="area-central">
             <div id="mesa" class="mesa">
                 </div>
+
         </section>
 
         <section class="jogadores-section">
@@ -51,11 +52,14 @@
         <footer class="controles">
             <button id="btn-como-jogar">Como Jogar</button>
             <button id="btn-comecar-jogada">Começar Jogada</button>
-            <button id="btn-truco">Truco</button>
-            <div id="truco-options" style="display: none;">
-                <button id="btn-aceitar-truco">Aceitar</button>
-                <button id="btn-negar-truco">Negar</button>
-                <button id="btn-aumentar-truco">Aumentar</button>
+
+            <div class="truco-controls">
+                <button id="btn-truco">Truco</button>
+                <div id="truco-options" style="display: none;">
+                    <button id="btn-aceitar-truco">Aceitar</button>
+                    <button id="btn-negar-truco">Negar</button>
+                    <button id="btn-aumentar-truco">Aumentar</button>
+                </div>
             </div>
             <button id="btn-fim-turno">Fim de Turno</button>
             <button id="btn-reset">Resetar Jogo</button>

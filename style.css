@@ -337,3 +337,53 @@ button:hover {
 }
 
 
+
+
+/* Estilos para o histórico de cartas jogadas na mão atual */
+.played-cards-history {
+    position: relative; /* Mudado para relative para fluir no layout */
+    margin-top: 15px; /* Espaçamento do histórico de jogadas */
+    display: flex;
+    justify-content: center;
+    gap: 5px; /* Diminui o espaçamento entre as cartas */
+    border: 1px dashed #ccc;
+    padding: 5px;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.1);
+    min-height: 80px; /* Altura mínima ajustada */
+    align-items: center;
+}  
+
+.played-cards-history .card-on-table {
+    width: 50px; /* Tamanho menor */
+    height: 70px; /* Tamanho menor */
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+}
+
+/* Estilos para os controles de Truco na área central */
+.truco-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.truco-controls button {
+    padding: 10px 20px;
+    font-size: 1.1em;
+}
+
+#truco-options {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.mesa .card.hidden.cover_blue {
+    background-image: url("cards/cover_blue.png") !important;
+}
+
+.mesa .card.hidden.cover_red {
+    background-image: url("cards/cover_red.png") !important;
+}
+
