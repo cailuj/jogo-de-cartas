@@ -1,8 +1,7 @@
-// Definição da classe Card para Truco Mineiro com manilha fixa
 class Card {
     constructor(suit, rank) {
-        this.suit = suit; // Naipe (e.g., 'paus', 'copas', 'espadas', 'ouros')
-        this.rank = rank; // Valor (e.g., 'A', '2', '3', ..., 'K')
+        this.suit = suit; // Naipe ('paus', 'copas', 'espadas', 'ouros')
+        this.rank = rank; // Valor ('A', '2', '3', ..., 'K')
         this.trucoValue = this.getTrucoValue(); // Valor para comparação no Truco
     }
 
